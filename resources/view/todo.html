@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> To Do List</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <style media="screen">
+        *,
+        *:before,
+        *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url("background-image.jpg");
+            background-size: 1910px 910px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            top: 50px;
+            max-height: 650px;
+            width: 610px;
+            position: relative;
+            background: rgba(141, 141, 141, 0.59);
+            border-radius: 10px;
+            overflow-y: auto;
+        }
+
+        #newtask {
+            position: fixed;
+            z-index: 1;
+            background: rgba(141, 141, 141, 0.9);
+            padding: 20px 20px;
+        }
+
+        #newtask input {
+            width: 515px;
+            height: 50px;
+            font: 24px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            border: 1px solid #d1d3d4;
+            padding: 12px;
+            margin-right: 5px;
+            color: #111111;
+            word-break: break-all;
+            font-weight: 500;
+            position: relative;
+            border-radius: 5px;
+        }
+
+        #newtask input:focus {
+            outline: none;
+            border-color: #0d75ec;
+        }
+
+        #newtask button {
+            position: relative;
+            float: right;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            border-radius: 5px;
+            background-color: #0d75ec00;
+            border: none;
+            color: #000000;
+            cursor: pointer;
+            outline: none;
+        }
+
+        #tasks {
+            padding: 10px 20px;
+            margin-top: 95px;
+            font: 24px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            width: 100%;
+            height: 90%;
+            position: relative;
+        }
+
+        .task {
+            background-color: rgb(215, 203, 208);
+            min-height: 50px;
+            margin-bottom: 8px;
+            padding: 7px 10px;
+            display: flex;
+            word-break: break-all;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #939697;
+            cursor: pointer;
+        }
+
+        #input_edit_task input:focus {
+            outline: none;
+            border-color: #0d75ec;
+        }
+
+        #input_edit_task {
+            width: 480px;
+            height: 44px;
+            font: 24px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            border: 1px solid #d1d3d4;
+            padding: 12px;
+            color: #111111;
+            font-weight: 500;
+            position: relative;
+            border-radius: 5px;
+        }
+
+        .edit_task {
+            background-color: rgb(215, 203, 208);
+            min-height: 50px;
+            margin-bottom: 8px;
+            padding: 5px 10px;
+            display: flex;
+            word-break: break-all;
+            border-radius: 5px;
+            justify-content: space-between;
+            border: 1px solid #939697;
+            cursor: pointer;
+        }
+
+        .task span {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .task > span + div {
+            display: inline-block;
+            width: calc(100% - 155px);
+            text-align: center;
+        }
+
+        .btns button {
+            height: 40px;
+            width: 40px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            background-color: #8b8b8b00;
+        }
+
+        #push {
+            position: relative;
+            float: right;
+            width: 50px;
+            font-size: 24px;
+            border-radius: 5px;
+            background-color: #0d75ec00;
+            border: none;
+            color: #000000;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .btns button i {
+            font-size: 20px;
+        }
+
+        .done {
+            text-decoration: line-through;
+        }
+
+        .done_button {
+            color: #666666;
+        }
+
+        .delete {
+            color: red;
+        }
+
+        .done_button_on {
+            color: #1ecc00;
+        }
+
+        #updateTask-input {
+            width: 27vw;
+            height: 40px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            border: 2px solid #d1d3d4;
+            padding: 12px;
+            color: #111111;
+            font-weight: 500;
+            position: relative;
+            border-radius: 5px;
+        }
+
+        .done {
+            max-width: 400px;
+        }
+
+        .edit-button-content:after {
+            content: " ";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+
+    </style>
+    <meta name="csrf-token" content="csrf_token()"/>
+</head>
+
+
+<script src="../js/main.js" defer>
+
+</script>
+
+</html>
+
+
+
